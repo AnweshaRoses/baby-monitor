@@ -1,3 +1,7 @@
+body{
+    background: linear-gradient(#ff8080, #2e1d19);
+    height: 100vh;
+}
 .topbar{
     width: 100%;
     height: 50px;
@@ -19,7 +23,7 @@
 .logo{
     font-weight: bold;
     font-size: 30px;
-    color: darkblue;
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
@@ -32,7 +36,7 @@
 .nav_link{
     transition: 0.7s all;
     padding:0 2em;
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     font-size: large;
 }
@@ -56,7 +60,6 @@
     position: sticky;
     top: 50px;  */
     width: 150px;
-    background-color: rgb(239, 239, 252);
     height: 100%;
     /* background-color: black; */
     position: fixed;
@@ -65,18 +68,20 @@
     flex-direction: column;
     align-items: center;
     padding-top: 15px;
+    /* background-color: #fba; */
+    background: linear-gradient(#ff8080, #2e1d19);
 }
 .sidebarwrapper{
     padding: 20px;
-    color: #555;
+    color: rgb(0, 0, 0);
 }
 .sidebarmenu{
     margin-bottom: 20px;
 
 }
 .sidebartitle{
-    font-size: 13px;
-    color: rgb(178, 178, 180);
+    font-size: 20px;
+    color: rgb(255, 255, 255);
 }
 .sidebarlist{
     list-style: none;
@@ -90,11 +95,11 @@
     border-radius: 10px;
 }
 .sidebarlistitem.active, .sidebarlistitem:hover{
-    background-color: rgb(229, 229, 250);
+    background-color: #fba;
 }
 .sidebaricon{
     margin-right: 5px;
-    font-size: 20px !important;
+    font-size: 18px !important;
 }
 .home{
     flex: 4;
@@ -108,12 +113,14 @@
     justify-content: space-between;
     max-width: 89.5%;
     margin-top: 40px;
-
+    
 }
 .featureditem{
+    background-color: #fba;
     flex:1;
     margin:0px 20px;
     padding: 30px;
+    color: rgb(0, 0, 0);
     /* border-radius: 10px; */
     cursor: pointer;
     border-style: solid;
@@ -170,6 +177,7 @@
     margin-left: 160px;
     border-style: solid;
     border-width: 1px;
+    background-color: #fba;
     border-color: rgba(141, 140, 140, 0.424);
     box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
     border-bottom-left-radius: 15px 255px;
