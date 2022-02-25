@@ -1,3 +1,7 @@
+body{
+    background: linear-gradient(#ff8080, #2e1d19);
+    height: 100vh;
+}
 .topbar{
 	width: 100%;
 	height: 50px;
@@ -19,7 +23,7 @@
     .logo{
 	font-weight: bold;
 	font-size: 30px;
-	color: darkblue;
+	color: rgb(255, 255, 255);
 	cursor: pointer;
     }
     
@@ -32,13 +36,13 @@
     .nav_link{
 	transition: 0.7s all;
 	padding:0 2em;
-	color: #000000;
+	color: #fffbfb;
 	text-decoration: none;
 	font-size: large;
     }
     
     .nav_link:hover {
-	color: darkblue;
+	color: #ced4ff;
     }
     
     .topavatar{
@@ -57,9 +61,10 @@
 
     .button {
         align-self: center;
-        background-color: #fff;
+        /* background-color: #fff; */
 		height: 15rem;
 		width: 15rem;
+        background: linear-gradient(#ff8080, #2e1d19);
         /* background-image: none;
         background-position: 0 90%;
         background-repeat: repeat no-repeat;
@@ -69,12 +74,13 @@
         border-width: 2px;
         box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
         box-sizing: border-box;
-        color: #41403e;
+        color: #ffffff;
         cursor: pointer;
         display: inline-block;
         font-family: Neucha, sans-serif;
         font-size: 2rem;
         line-height: 23px;
+        border: none;
         outline: none;
         padding: .75rem;
         text-decoration: none;
@@ -91,7 +97,7 @@
           .button:hover {
         box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
         transform: translate3d(0, 2px, 0);
-		color: darkblue;
+		/* color: #fba; */
           }
           
           .button:focus {

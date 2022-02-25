@@ -23,5 +23,16 @@
     <div class="btn_sec">
 	<button class="button" role="button">Monitor</button>
     </div>
+    <script>
+        const Button = document.querySelector(".button")
+        Button.addEventListener("click",()=>{
+            if(Button.innerText==="Monitor"){
+                Button.innerText="Unmonitor";
+            }
+            else{
+                Button.innerText="Monitor";
+            }
+        })
+    </script>
 </body>
 </html>
