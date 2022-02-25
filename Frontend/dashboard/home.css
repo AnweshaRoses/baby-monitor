@@ -1,7 +1,10 @@
 .topbar{
     width: 100%;
     height: 50px;
-    background-color: white;
+    font-family: Neucha, sans-serif;
+    background-color: rgba(0, 0, 0, 0.109);
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+        transform: translate3d(0, 2px, 0);
     position: sticky;
     top: 0;
     z-index: 999;
@@ -23,6 +26,19 @@
 .topright{
     display: flex;
     align-items: center;
+    padding: 0 ;
+}
+
+.nav_link{
+    transition: 0.7s all;
+    padding:0 2em;
+    color: #000000;
+    text-decoration: none;
+    font-size: large;
+}
+
+.nav_link:hover {
+    color: darkblue;
 }
 
 .topavatar{
@@ -30,7 +46,9 @@
     width: 40px;
     border-radius: 50%;
     cursor: pointer;
+    padding:0 2em;
 }
+
 
 .sidebar{
     flex:1;
@@ -42,11 +60,11 @@
     height: 100%;
     /* background-color: black; */
     position: fixed;
-    top: 0;
+    top: 95px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 60px;
+    padding-top: 15px;
 }
 .sidebarwrapper{
     padding: 20px;
@@ -89,7 +107,7 @@
     display: flex;
     justify-content: space-between;
     max-width: 89.5%;
-    margin-top: 10px;
+    margin-top: 40px;
 
 }
 .featureditem{
@@ -98,8 +116,14 @@
     padding: 30px;
     /* border-radius: 10px; */
     cursor: pointer;
-    -webkit-box-shadow: 0px 0px 9px -1px #000000; 
-box-shadow: 0px 0px 9px -1px #000000;
+    border-style: solid;
+        border-width: 1px;
+        border-color: rgba(141, 140, 140, 0.424);
+        box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    border-bottom-left-radius: 15px 255px;
+        border-bottom-right-radius: 225px 15px;
+        border-top-left-radius: 255px 15px;
+        border-top-right-radius: 15px 225px;
 }
 .featuredtitle{
     font-size: 20px;
@@ -137,8 +161,14 @@ box-shadow: 0px 0px 9px -1px #000000;
 } 
 .widgetlg{
     margin-left: 160px;
-    -webkit-box-shadow: 0px 0px 9px -1px #000000; 
-    box-shadow: 0px 0px 9px -1px #000000;
+    border-style: solid;
+        border-width: 1px;
+        border-color: rgba(141, 140, 140, 0.424);
+        box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    border-bottom-left-radius: 15px 255px;
+        border-bottom-right-radius: 225px 15px;
+        border-top-left-radius: 255px 15px;
+        border-top-right-radius: 15px 225px;
     padding: 20px;
     width: 100%;
 }
