@@ -64,7 +64,8 @@ body{
         /* background-color: #fff; */
 		height: 15rem;
 		width: 15rem;
-        background: linear-gradient(#ff8080, #2e1d19);
+        background: linear-gradient(#ff5454, #2e1d19);;
+        
         /* background-image: none;
         background-position: 0 90%;
         background-repeat: repeat no-repeat;

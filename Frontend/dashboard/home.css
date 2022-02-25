@@ -44,13 +44,30 @@ body{
 .nav_link:hover {
     color: #fba;
 }
-
+.topright img{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+}
 .topavatar{
     height: 40px;
     width: 40px;
     border-radius: 50%;
     cursor: pointer;
     padding:0 2em;
+}
+.profile span{
+    display: none;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.profile span:hover{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
 }
 
 
