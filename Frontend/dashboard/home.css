@@ -165,6 +165,9 @@ body{
     display: flex;
     margin: 20px;
 } 
+.homeWidgets{
+    margin-top: 8vh;
+}
 .widgetlg{
     border-style: solid;
     border-width: 1px;
