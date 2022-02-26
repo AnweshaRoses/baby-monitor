@@ -1,7 +1,6 @@
 body{
     background: linear-gradient(#ff8080, #2e1d19);
-padding-bottom:5rem;
-margin:0;
+    height: 100vh;
 }
 .topbar{
     width: 100%;
