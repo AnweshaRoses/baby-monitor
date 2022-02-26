@@ -1,6 +1,7 @@
 body{
     background: linear-gradient(#ff8080, #2e1d19);
-    height: 100vh;
+padding-bottom:5rem;
+margin:0;
 }
 .topbar{
     width: 100%;
@@ -94,66 +95,15 @@ body{
 }
 
 
-.sidebar{
-    flex:1;
-    /* height: calc(100vh - 50px);
-    position: sticky;
-    top: 50px;  */
-    width: 150px;
-    height: 100%;
-    /* background-color: black; */
-    position: fixed;
-    top: 95px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 15px;
-    /* background-color: #fba; */
-    background: linear-gradient(#ff8080, #2e1d19);
-}
-.sidebarwrapper{
-    padding: 20px;
-    color: rgb(0, 0, 0);
-}
-.sidebarmenu{
-    margin-bottom: 20px;
-
-}
-.sidebartitle{
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-}
-.sidebarlist{
-    list-style: none;
-    padding: 5px;
-}
-.sidebarlistitem{
-    padding: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-}
-.sidebarlistitem.active, .sidebarlistitem:hover{
-    background-color: #fba;
-}
-.sidebaricon{
-    margin-right: 5px;
-    font-size: 18px !important;
-}
 .home{
-    flex: 4;
-    /* display: flex; */
+    margin:3rem auto;
 }
 
 .featured{
-    margin-left: 160px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    max-width: 89.5%;
-    margin-top: 40px;
-    
+    max-width: 100%;
 }
 .featureditem{
     background-color: #fba;
@@ -214,7 +164,6 @@ body{
     margin: 20px;
 } 
 .widgetlg{
-    margin-left: 160px;
     border-style: solid;
     border-width: 1px;
     background-color: #fba;
@@ -279,3 +228,45 @@ body{
     background-color: #dde5f6;
     color: #005abb;
 }
+
+
+
+
+@media screen and (max-width: 480px) {
+    .featured{
+        flex-direction: column;
+        text-align: center;
+gap:10px;
+    }
+    .featuredmoney{
+        margin:0 auto;
+    }
+.homeWidgets{
+margin:0;
+}
+.widgetlg{
+    border-radius:0;
+padding:0;
+width: 100vw;
+overflow: scroll;
+margin-top:3rem;
+padding:20px;
+}
+.widgetlgimg{
+display:none;}
+.widgetlgtable{
+border-spacing:13px;
+}
+}
+
+@media screen and (max-width: 850px) {
+    .nav_link{display:none;}
+}
+@media screen and (max-width: 310px) {
+    .topbar{
+        height:120px;
+    }
+}
+
+
+
