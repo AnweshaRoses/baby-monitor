@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
 body{
     background: linear-gradient(#ff8080, #2e1d19);
     height: 100vh;
+    font-family: "Poppins", sans-serif;
 }
 .topbar{
     width: 100%;
