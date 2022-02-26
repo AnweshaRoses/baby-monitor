@@ -22,6 +22,7 @@ body {
   height: 100vh;
   /* background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)); */
   background: linear-gradient(#ff8080, #2e1d19);
+  overflow: hidden;
   /* display: grid;
   justify-content: center;
   align-content: center; */

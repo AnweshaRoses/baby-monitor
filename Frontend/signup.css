@@ -6,6 +6,8 @@ html {
     padding:0;
     font-family: sans-serif;
     background: linear-gradient(#ff8080, #2e1d19);
+    overflow: hidden;
+
   }
   .logincontainer{
       display: flex;

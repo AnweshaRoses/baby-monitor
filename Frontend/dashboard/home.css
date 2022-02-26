@@ -4,6 +4,7 @@ body{
     background: linear-gradient(#ff8080, #2e1d19);
     height: 100vh;
     font-family: "Poppins", sans-serif;
+    overflow: hidden;
 }
 .topbar{
     width: 100%;
