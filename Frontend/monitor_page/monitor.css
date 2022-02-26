@@ -132,7 +132,51 @@ body{
         transform: translate3d(0, 2px, 0);
 		/* color: #fba; */
           }
+          .circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
           
-          /* .button:focus {
-        box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+            height: 270px;
+            width: 270px;
+          
+            border: 2px solid;
+            border-radius: 50%;
+          }
+          
+          .time {
+            font-family: "Roboto Mono", monospace;
+            font-weight: 300;
+            font-size: 48px;
+          }
+          
+          .gold {
+            font-weight: 900;
+          
+            color: #f2c94c;
+            text-shadow: 0 0 0px #fff, 0 0 50px #f2c94c;
+          }
+          
+          .controls {
+            display: flex;
+            justify-content: space-between;
+          
+            width: 187px;
+          }
+          
+          .buttonReset {
+            cursor: pointer;
+            background: transparent;
+            padding: 0;
+            border: none;
+            margin: 0;
+            outline: none;
+          }
+/*           
+          #playButton {
+            display: block;
+          }
+          
+          #pauseButton {
+            display: none;
           } */

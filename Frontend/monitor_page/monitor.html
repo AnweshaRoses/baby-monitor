@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="monitor.css">
     <script src="script.js"></script>
+    <script src="stopwatch.js"></script>
 </head>
 <body>
     <div class='topbar'>
@@ -22,7 +23,10 @@
         </div>
     </div>
     <div class="btn_sec">
-	<button class="button" role="button">Monitor</button>
+	<button class="button" role="button" id="monitor_btn">Monitor</button>
+    
+    <span class="time" id="display">00:00:00</span>
+    
     </div>
     <script>
         const Button = document.querySelector(".button")
@@ -30,9 +34,11 @@
             if(Button.innerText==="Monitor"){
                 Button.innerText="Unmonitor";
                 monitorBaby();
+                start();
             }
             else{
                 Button.innerText="Monitor";
+                reset();
                 unmonitorBaby();
             }
         })

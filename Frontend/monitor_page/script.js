@@ -87,7 +87,7 @@ function unmonitorBaby(){
     spikesIn5Sec=0
     clearInterval(intervalFiveSec)
     clearInterval(interval50ms)
-    audioFile.pause()
+    // audioFile.pause()
 //    stop the music
 }
 
