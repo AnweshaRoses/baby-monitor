@@ -56,15 +56,15 @@ function monitorBaby(){
     },5000)
 
 
-
     let myMic=new Microphone()
+    setTimeout(()=>{
     interval50ms=setInterval(()=>{
         let vol=myMic.getVolume()
         if(vol>0.09){
 //            console.log("spike in volume")
             spikesIn5Sec+=1    
         };
-    },50)
+    },50)},1000)
 }
 
 function calmTheBaby(){
