@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="monitor.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class='topbar'>
         <div class="topbarwrapper">
             <div class="topleft">
-                <a href="/Frontend/dashboard/home.html" class='logo'>CRY BABY</a>
+                <span class='logo'>CRY BABY</span>
             </div>
             <div class="topright">
                 <a href="/Frontend/dashboard/home.html" class="nav_link">Dashboard</a>
@@ -28,9 +29,11 @@
         Button.addEventListener("click",()=>{
             if(Button.innerText==="Monitor"){
                 Button.innerText="Unmonitor";
+                monitorBaby();
             }
             else{
                 Button.innerText="Monitor";
+                unmonitorBaby();
             }
         })
     </script>
