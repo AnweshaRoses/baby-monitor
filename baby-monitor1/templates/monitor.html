@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/monitor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/static/script.js"></script>
+    <script src="/static/stopwatch.js"></script>
+</head>
+<body>
+     <audio>
+  <source src="/static/lullaby.mp3" type="audio/mp3">
+</audio> 
+    <div class='topbar'>
+        <div class="topbarwrapper">
+            <div class="topleft">
+                <span class='logo'>Don't Cry</span>      
+            </div>
+            <div class="topright">
+                <a href="/" class="nav_link">Dashboard</a>
+                <a href="/monitor" class="nav_link">Monitor</a>
+                <a href="/about" class="nav_link">About</a>
+                <a href="/faq" class="nav_link">FAQ</a>
+                    <div class="dropdown">
+                        <span><i class="fa-solid fa-caret-down icon"></i></span>
+                        <div class="dropdown-content">
+                        <span><a href="/logout">Log out</a></span>
+                        <hr>
+                        <span> <a href="/monitor"> Monitor</a></span>
+                        <hr>
+                        <span><a href="/about">About</a></span>
+                        <hr>
+                        <span><a href="/faq">FAQ</a></span>
+                        <hr>
+                        <span><a href="/">Home</a></span>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1517070208541-6ddc4d3efbcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="" class="topavatar" />
+            </div>
+        </div>
+    </div>
+    <div class="btn_sec">
+	<button class="button" role="button" id="monitor_btn">Monitor</button>
+    
+    <span class="time" id="display">00:00:00</span>
+    
+    </div>
+    <script>
+        const Button = document.querySelector(".button")
+        Button.addEventListener("click",()=>{
+            if(Button.innerText==="Monitor"){
+                Button.innerText="Unmonitor";
+                monitorBaby();
+                start();
+            }
+            else{
+                Button.innerText="Monitor";
+                reset();
+                unmonitorBaby();
+            }
+        })
+    </script>
+    
+</body>
+</html>
