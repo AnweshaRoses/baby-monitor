@@ -29,7 +29,7 @@ class Microphone{
 
 let intervalFiveSec;
 let interval50ms;
-let spikesIn5Sec=0
+let spikesIn10Sec=0
 let audioFile=null;
 
 function getTimeObj(){
@@ -47,13 +47,13 @@ function getTimeObj(){
 //event handler for clicking MONITOR Button
 function monitorBaby(){
     intervalFiveSec=setInterval(()=>{
-        if(spikesIn5Sec>7){
+        if(spikesIn10Sec>16){
             calmTheBaby()
             clearInterval(intervalFiveSec)
             clearInterval(interval50ms)
         }
-        spikesIn5Sec=0
-    },5000)
+        spikesIn10Sec=0
+    },10000)
 
 
     let myMic=new Microphone()
@@ -62,7 +62,7 @@ function monitorBaby(){
         let vol=myMic.getVolume()
         if(vol>0.09){
 //            console.log("spike in volume")
-            spikesIn5Sec+=1    
+            spikesIn10Sec+=1    
         };
     },50)},1000)
 }
@@ -84,7 +84,7 @@ fetch("/baby-is-crying", {
 }
 
 function unmonitorBaby(){
-    spikesIn5Sec=0
+    spikesIn10Sec=0
     clearInterval(intervalFiveSec)
     clearInterval(interval50ms)
     audioFile.pause()
