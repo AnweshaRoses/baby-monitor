@@ -31,6 +31,7 @@ body{
     display: flex;
     align-items: center;
     padding: 0 ;
+    margin-right:80px ;
 }
 
 .nav_link{
@@ -51,20 +52,39 @@ body{
     object-fit: cover;
     cursor: pointer;
 }
-.topavatar{
+/* .topavatar{
     height: 40px;
     width: 40px;
     border-radius: 50%;
     cursor: pointer;
     padding:0 2em;
-}
-.profile span{
-    display: none;
-    background-color: black;
-    border-radius: 5px;
+} */
+.dropdown {
+    /* position: relative;
+    display: inline-block; */
+    margin: 0 15px;
     cursor: pointer;
 }
-.profile span:hover{
+  
+.dropdown-content {
+    display: none;
+    background-color: #fba;
+    border: 2px solid black;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.dropdown-content hr{
+    background-color: gray;
+    min-width: 40px;
+}
+.dropdown-content a{
+   text-decoration: none;
+   color: white;
+}
+  
+.dropdown:hover .dropdown-content {
     display: flex;
     flex-direction: column;
     position: absolute;
