@@ -1,8 +1,9 @@
-from flask import Flask, render_template, request, url_for, redirect, flash, send_from_directory
+from flask import Flask, render_template, request, url_for, redirect, flash, send_from_directory,jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 from email_sender import Mailer
+import json
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'any-secret-key-you-choose'
@@ -26,6 +27,8 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(100), unique=True)
     password = db.Column(db.String(100))
     name = db.Column(db.String(1000))
+    cry_data = db.Column(db.String(1000000000000000000))
+    music_name=db.Column(db.String(1000))
 #Line below only required once, when creating DB. 
 db.create_all()
 
@@ -34,7 +37,7 @@ db.create_all()
 def home():
     if(current_user.is_anonymous):
         return render_template("login.html")
-    return render_template("dashboard.html")
+    return render_template("dashboard.html",user_music=current_user.music_name)
 
 
 @app.route('/register',methods=["GET","POST"])
@@ -44,7 +47,9 @@ def register():
             user=User(
                 name=request.form["name"],
                 email=request.form["email"],
-                password=generate_password_hash(request.form["password"])
+                password=generate_password_hash(request.form["password"]),
+                cry_data="[]",
+                music_name=""
             )
             db.session.add(user)
             db.session.commit()
@@ -60,26 +65,30 @@ def login():
         if user:
             if check_password_hash(user.password,request.form.get("password")):
                 login_user(user)
-                return redirect(f"/secrets?name={user.name}")
+                return redirect("/")
     return render_template("login.html",logged_in=not current_user.is_anonymous)
 
-@login_required
+
 @app.route('/monitor',methods=["GET","POST"])
+@login_required
 def monitor():
     return render_template("monitor.html")
 
-@login_required
+
 @app.route('/faq')
+@login_required
 def faq():
     return render_template("faq.html")
 
-@login_required
+
 @app.route('/about')
+@login_required
 def about():
     return render_template("about.html")
 
-@login_required
+
 @app.route("/lullaby.mp3")
+@login_required
 def get_music():
     return send_from_directory(
         app.config["UPLOAD_FOLDER"],"lullaby.mp3"
@@ -90,9 +99,28 @@ def get_music():
 @login_required
 def babyHandler():
     if request.method=="POST":
+      
         my_mailer=Mailer()
         my_mailer.mail(current_user.email)
-        print(current_user.email)
+      
+        dt_cry=request.get_json()
+        cry_ls=json.loads(current_user.cry_data)
+        cry_ls.insert(0,dt_cry)
+        current_user.cry_data=json.dumps(cry_ls)
+        db.session.commit()
+        print(current_user.cry_data)
+        return {"request":True}
+        
+@app.route("/get-cry-data")
+def get_cry_data():
+  return current_user.cry_data
+
+@app.route("/user-file", methods=["GET", "POST"])
+def single_file():
+  return
+  if request.method=="POST":
+    pass
+    
 
 
 @app.route('/logout')
@@ -102,5 +130,6 @@ def logout():
     return redirect("/")
 
 
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0',port=8080,debug=True)
